@@ -1,0 +1,11 @@
+module mic_samples_test(clk, rst, leds);
+	input clk, rst;
+	output [9:0] leds;
+	
+	wire [11:0] sample;
+
+	mic_ADC mic(.CLOCK(clk), .CH0(sample), .RESET(rst));
+	
+	assign leds[9:0] = sample[11:2];
+	
+endmodule

@@ -1,0 +1,89 @@
+module mic_sampler(clk, start, done, s0, s1, s2, s3, s4, s5, s6, 
+							s7, s8, s9, s10, s11, s12, s13, s14, s15);
+
+	// Inputs		
+	input clk_25; // 25Mhz input clock
+	input start;
+
+	// Outputs
+	output reg done = 0;
+	output reg [17:0] s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15 = 0;
+	
+	// Internal signals
+	wire clk_10;  // ADC clock
+	reg [3:0] index;
+	wire [11:0] sample;
+	reg [17:0] samples [0:15];
+
+	// States
+	localparam IDLE = 0;
+	localparam SAMPLING = 1;
+	wire state_d;
+	reg state = IDLE;
+	
+	// 10Mhz clock
+   	sampler_pll clk_10_gen(.inclk0(clk), c0(clk_10));
+
+	// ADC
+	mic_ADC mic(.CLOCK(clk_10), .CH0(sample));
+	
+	// Sample 16 times
+	always @(posedge clk) begin
+		state <= state_d;
+		
+		// Set done to 0 when idle
+		if (state == IDLE) begin
+			done <= 0;
+			index <= 0;
+		end
+
+		// Sample 16 times
+		else begin
+			if (index < 16) begin
+				samples[index] <= sample;
+				index <= index + 1;
+			end
+			else begin
+				done <= 1;
+				index <= 0;
+				s0 <= samples[0];
+				s1 <= samples[1];
+				s2 <= samples[2];
+				s3 <= samples[3];
+				s4 <= samples[4];
+				s5 <= samples[5];
+				s6 <= samples[6];
+				s7 <= samples[7];
+				s8 <= samples[8];
+				s9 <= samples[9];
+				s10 <= samples[10];
+				s11 <= samples[11];
+				s12 <= samples[12];
+				s13 <= samples[13];
+				s14 <= samples[14];
+				s15 <= samples[15];
+			end
+		end
+	end
+
+	// State machine
+	always_comb begin
+		if (state = IDLE) begin
+			if (start) begin
+				state_d = SAMPLING;
+			end
+			else begin
+				state_d = IDLE;
+			end
+		end
+		else begin
+			if (done) begin
+				state_d = IDLE;
+			end
+			else begin
+				state_d = SAMPLING;
+			end
+		end
+	end
+	
+endmodule

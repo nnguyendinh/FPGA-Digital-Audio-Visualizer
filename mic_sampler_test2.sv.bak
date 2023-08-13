@@ -1,0 +1,18 @@
+module mic_sampler_test2(clk, clk_adc, rst, start, leds);
+	input clk, clk_adc, rst, start;
+	output [9:0] leds;
+
+    wire clk_25;
+	wire done;
+	wire [17:0] s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15;
+
+    pll clock_gen(.inclk0(clk), .c0(clk_25));
+
+	mic_sampler sampler(clk_25, clk_adc, start, done, s0, s1, s2, s3, s4, s5, s6, 
+							s7, s8, s9, s10, s11, s12, s13, s14, s15);
+
+	always @(posedge done) begin
+        leds <= {s0[17:13], s0[3:0]};
+    end
+
+endmodule
