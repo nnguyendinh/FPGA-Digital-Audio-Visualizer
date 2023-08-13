@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="7c56015a92e191bd9039"/>
+  </project>
+  <file_info>
+    <file device="10M50DAF484C7G" path="DAV.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="mic_sampler:sampler|ADC_25Mhz:mic" name="mic">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME ADC_25Mhz HAS_SOPCINFO 1 GENERATION_ID 1691876373"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
