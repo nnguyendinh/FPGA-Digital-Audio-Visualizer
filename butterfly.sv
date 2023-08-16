@@ -1,6 +1,6 @@
 module butterfly(a, b, w, sum, diff);
 	
-	parameter WIDTH = 32;
+	parameter WIDTH = 36;
 	
 	// INPUTS
 	input signed [WIDTH-1:0] a;

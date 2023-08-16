@@ -1,4 +1,8 @@
-module fft_16point(clk, reset, start, in0, in1, in2, in3, out0, out1, out2, out3, done, fly1_sum, fly1_diff, fly2_sum, fly2_diff);
+module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6, 
+					in7, in8, in9, in10, in11, in12, in13, in14, in15, 
+					out0, out1, out2, out3, out4, out5, out6, out7, 
+					out8, out9, out10, out11, out12, out13, out14, out15,
+					done);
 	
 	// INPUTS
 	input clk;
@@ -67,64 +71,64 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, out0, out1, out2, out3
 	reg [35:0] fly0_w;
 	reg [35:0] d_fly0_sum;
 	reg [35:0] d_fly0_diff;
-	output reg [35:0] fly0_sum;
-	output reg [35:0] fly0_diff;
+	reg [35:0] fly0_sum;
+	reg [35:0] fly0_diff;
 
 	reg [35:0] fly1_a;
 	reg [35:0] fly1_b;
 	reg [35:0] fly1_w;
 	reg [35:0] d_fly1_sum;
 	reg [35:0] d_fly1_diff;
-	output reg [35:0] fly1_sum;
-	output reg [35:0] fly1_diff;
+	reg [35:0] fly1_sum;
+	reg [35:0] fly1_diff;
 	
 	reg [35:0] fly2_a;
 	reg [35:0] fly2_b;
 	reg [35:0] fly2_w;
 	reg [35:0] d_fly2_sum;
 	reg [35:0] d_fly2_diff;
-	output reg [35:0] fly2_sum;
-	output reg [35:0] fly2_diff;
+	reg [35:0] fly2_sum;
+	reg [35:0] fly2_diff;
 
 	reg [35:0] fly3_a;
 	reg [35:0] fly3_b;
 	reg [35:0] fly3_w;
 	reg [35:0] d_fly3_sum;
 	reg [35:0] d_fly3_diff;
-	output reg [35:0] fly3_sum;
-	output reg [35:0] fly3_diff;
+	reg [35:0] fly3_sum;
+	reg [35:0] fly3_diff;
 
 	reg [35:0] fly4_a;
 	reg [35:0] fly4_b;
 	reg [35:0] fly4_w;
 	reg [35:0] d_fly4_sum;
 	reg [35:0] d_fly4_diff;
-	output reg [35:0] fly4_sum;
-	output reg [35:0] fly4_diff;
+	reg [35:0] fly4_sum;
+	reg [35:0] fly4_diff;
 
 	reg [35:0] fly5_a;
 	reg [35:0] fly5_b;
 	reg [35:0] fly5_w;
 	reg [35:0] d_fly5_sum;
 	reg [35:0] d_fly5_diff;
-	output reg [35:0] fly5_sum;
-	output reg [35:0] fly5_diff;
+	reg [35:0] fly5_sum;
+	reg [35:0] fly5_diff;
 
 	reg [35:0] fly6_a;
 	reg [35:0] fly6_b;
 	reg [35:0] fly6_w;
 	reg [35:0] d_fly6_sum;
 	reg [35:0] d_fly6_diff;
-	output reg [35:0] fly6_sum;
-	output reg [35:0] fly6_diff;
+	reg [35:0] fly6_sum;
+	reg [35:0] fly6_diff;
 
 	reg [35:0] fly7_a;
 	reg [35:0] fly7_b;
 	reg [35:0] fly7_w;
 	reg [35:0] d_fly7_sum;
 	reg [35:0] d_fly7_diff;
-	output reg [35:0] fly7_sum;
-	output reg [35:0] fly7_diff;
+	reg [35:0] fly7_sum;
+	reg [35:0] fly7_diff;
 	
 	// Butterfly Units
 	butterfly fly0(fly0_a, fly0_b, fly0_w, d_fly0_sum, d_fly0_diff);
