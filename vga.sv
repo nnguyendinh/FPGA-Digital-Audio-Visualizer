@@ -93,7 +93,7 @@ module vga(
 		// check if we're within vertical active video range
 		if (hc <= HPIXELS && vc <= VLINES)
 		begin
-            if (VLINES - vc < (bars[hc/40]) / 256) begin
+            if (VLINES - vc < (bars[hc/40]) / 512) begin
                 red <= hc / 40;
                 green <= ((hc / 40) + (vc / 30))/2;
                 blue <= vc / 30;
