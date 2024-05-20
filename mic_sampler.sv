@@ -1,5 +1,5 @@
 module mic_sampler(clk_25, clk_adc, start, done, s0, s1, s2, s3, s4, s5, s6, 
-							s7, s8, s9, s10, s11, s12, s13, s14, s15);
+							s7, s8, s9, s10, s11, s12, s13, s14, s15, clk_sampling);
 
 	// Inputs		
 	input clk_25; // 25Mhz input clock
@@ -11,6 +11,7 @@ module mic_sampler(clk_25, clk_adc, start, done, s0, s1, s2, s3, s4, s5, s6,
 	output reg [17:0] s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15 = 0;
 	
 	// Internal signals
+	output clk_sampling;
 	reg collected = 0;
 	reg [3:0] index = 3;
 	wire [11:0] sample;
@@ -21,12 +22,14 @@ module mic_sampler(clk_25, clk_adc, start, done, s0, s1, s2, s3, s4, s5, s6,
 	localparam SAMPLING = 1'b1;
 	reg state_d = IDLE;
 	reg state = IDLE;
+	
+	clockDivider thanks_prem(clk_adc, 19'd64, 1'b0, clk_sampling);
 
 	// ADC
-	ADC_25Mhz mic(.CLOCK(clk_25), .CH0(sample), .RESET(0));
-	
+	ADC_10MHz mic(.CLOCK(clk_adc), .CH0(sample), .RESET(0));
+
 	// Sample 16 times
-	always @(posedge clk_adc) begin
+	always @(posedge clk_sampling) begin
 		state <= state_d;
 		
 		// Set collected to 0 when idle

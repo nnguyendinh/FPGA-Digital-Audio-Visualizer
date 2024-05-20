@@ -1,17 +1,17 @@
-Fitter Status : Successful - Sun Aug 13 16:48:26 2023
+Fitter Status : Successful - Mon May 20 11:53:27 2024
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : DAV
-Top-level Entity Name : mic_sampler_test
+Top-level Entity Name : audio_display_top
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 121 / 49,760 ( < 1 % )
-    Total combinational functions : 94 / 49,760 ( < 1 % )
-    Dedicated logic registers : 94 / 49,760 ( < 1 % )
-Total registers : 94
-Total pins : 13 / 360 ( 4 % )
+Total logic elements : 896 / 49,760 ( 2 % )
+    Total combinational functions : 497 / 49,760 ( < 1 % )
+    Dedicated logic registers : 603 / 49,760 ( 1 % )
+Total registers : 603
+Total pins : 28 / 360 ( 8 % )
 Total virtual pins : 0
-Total memory bits : 64 / 1,677,312 ( < 1 % )
+Total memory bits : 768 / 1,677,312 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 2 / 4 ( 50 % )
 UFM blocks : 0 / 1 ( 0 % )

@@ -1,12 +1,14 @@
 module audio_display_top(
 		input rst, 
 		input clk, 
-        input clk_adc,
+      input clk_adc,
+		input start,
 		output reg hsync, 
 		output reg vsync, 
 		output reg [3:0] red, 
 		output reg [3:0] green, 
-		output reg [3:0] blue
+		output reg [3:0] blue,
+		output [9:0] leds
 	);
 
     wire [17:0] s0;
@@ -53,14 +55,19 @@ module audio_display_top(
 	reg [2:0] state_d = IDLE;
 	
 	wire clk_25;
+	wire clk_sampling;
     reg sampling_start = 0;
 	 wire sampling_done;
 
 	pll clk_generator(clk, clk_25);
+	
+	assign leds[9:2] = s0[9:2];
+	assign leds[1] = start;
+	assign leds[0] = clk_sampling;
 
-    mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), .start(sampling_start), .done(sampling_done), .s0(s0), 
+    mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), .start(1'b1), .done(sampling_done), .s0(s0), 
                         .s1(s1), .s2(s2), .s3(s3), .s4(s4), .s5(s5), .s6(s6), .s7(s7), .s8(s8), 
-                        .s9(s9), .s10(s10), .s11(s11), .s12(s12), .s13(s13), .s14(s14), .s15(s15));
+                        .s9(s9), .s10(s10), .s11(s11), .s12(s12), .s13(s13), .s14(s14), .s15(s15), .clk_sampling(clk_sampling));
 
 	vga display(.vgaclk(clk_25), .rst(rst), .hsync(hsync), .vsync(vsync), .red(red), .green(green), .blue(blue), 
             .bar0(b0), .bar1(b1), .bar2(b2), .bar3(b3), .bar4(b4), .bar5(b5), .bar6(b6), .bar7(b7), .bar8(b8), 

@@ -26,23 +26,23 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 	input [35:0] in15;
 	
 	// OUTPUTS
-	output reg [35:0] out0;
-	output reg [35:0] out1;
-	output reg [35:0] out2;
-	output reg [35:0] out3;
-	output reg [35:0] out4;
-	output reg [35:0] out5;
-	output reg [35:0] out6;
-	output reg [35:0] out7;
-	output reg [35:0] out8;
-	output reg [35:0] out9;
-	output reg [35:0] out10;
-	output reg [35:0] out11;
-	output reg [35:0] out12;
-	output reg [35:0] out13;
-	output reg [35:0] out14;
-	output reg [35:0] out15;
-	output reg done;
+	output reg [35:0] out0 = 0;
+	output reg [35:0] out1 = 0;
+	output reg [35:0] out2 = 0;
+	output reg [35:0] out3 = 0;
+	output reg [35:0] out4 = 0;
+	output reg [35:0] out5 = 0;
+	output reg [35:0] out6 = 0;
+	output reg [35:0] out7 = 0;
+	output reg [35:0] out8 = 0;
+	output reg [35:0] out9 = 0;
+	output reg [35:0] out10 = 0;
+	output reg [35:0] out11 = 0;
+	output reg [35:0] out12 = 0;
+	output reg [35:0] out13 = 0;
+	output reg [35:0] out14 = 0;
+	output reg [35:0] out15 = 0;
+	output reg done = 0;
 	
 	// STATES
 	localparam RESET = 0;
@@ -57,13 +57,13 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 	
 	// TWIDDLE FACTORS
 	localparam W_0_16		= 36'b011111111111111111_000000000000000000;
-	localparam W_1_16		= 32'b011101100100000111_110011110000010001;
-	localparam W_2_16		= 32'b010110101000001010_101001010111110110;
-	localparam W_3_16		= 32'b001100001111101111_100010011011111001;
-	localparam W_4_16		= 32'b000000000000000000_100000000000000000;
-	localparam W_5_16		= 32'b110011110000010001_100010011011111001;
-	localparam W_6_16		= 32'b101001010111110110_101001010111110110;
-	localparam W_7_16		= 32'b100010011011111001_110011110000010001;
+	localparam W_1_16		= 36'b011101100100000111_110011110000010001;
+	localparam W_2_16		= 36'b010110101000001010_101001010111110110;
+	localparam W_3_16		= 36'b001100001111101111_100010011011111001;
+	localparam W_4_16		= 36'b000000000000000000_100000000000000000;
+	localparam W_5_16		= 36'b110011110000010001_100010011011111001;
+	localparam W_6_16		= 36'b101001010111110110_101001010111110110;
+	localparam W_7_16		= 36'b100010011011111001_110011110000010001;
 	
 	// INTERMEDIARY
 	reg [35:0] fly0_a;
@@ -144,10 +144,24 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 	always @ (posedge clk, posedge reset) begin
 		if (reset) begin
 			state 		<= RESET;
+			fly0_sum 	<= 0;
+			fly0_diff 	<= 0;
 			fly1_sum 	<= 0;
 			fly1_diff 	<= 0;
 			fly2_sum 	<= 0;
 			fly2_diff	<= 0;
+			fly3_sum 	<= 0;
+			fly3_diff	<= 0;
+			fly4_sum 	<= 0;
+			fly4_diff 	<= 0;
+			fly5_sum 	<= 0;
+			fly5_diff	<= 0;
+			fly6_sum 	<= 0;
+			fly6_diff	<= 0;
+			fly7_sum 	<= 0;
+			fly7_diff 	<= 0;
+
+			done 		<= 0;
 		end
 		else begin
 			if (state == STAGE_1 || state == STAGE_2 || state == STAGE_3 || state == STAGE_4) begin
@@ -167,6 +181,44 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly6_diff 	<= d_fly6_diff;
 				fly7_sum	<= d_fly7_sum;
 				fly7_diff 	<= d_fly7_diff;
+
+				done 		<= 0;
+			end
+			else if (state == DONE) begin
+
+//				out0 		<= fly0_sum;
+//				out1 		<= fly1_sum;
+//				out2 		<= fly2_sum;
+//				out3 		<= fly3_sum;
+//				out4 		<= fly4_sum;
+//				out5 		<= fly5_sum;
+//				out6 		<= fly6_sum;
+//				out7 		<= fly7_sum;
+//				out8 		<= fly0_diff;
+//				out9 		<= fly1_diff;
+//				out10 		<= fly2_diff;
+//				out11 		<= fly3_diff;
+//				out12 		<= fly4_diff;
+//				out13 		<= fly5_diff;
+//				out14 		<= fly6_diff;
+//				out15 		<= fly7_diff;
+				out0 		<= 36'b011111111111111111_000000000000000000;
+				out1 		<= 36'b011111111111111111_000000000000000000;
+				out2 		<= 36'b011101100100000111_000000000000000000;
+				out3 		<= 36'b010110101000001010_000000000000000000;
+				out4 		<= 36'b001100001111101111_000000000000000000;
+				out5 		<= 36'b000000000000000000_000000000000000000;
+				out6 		<= 36'b110011110000010001_000000000000000000;
+				out7 		<= 36'b101001010111110110_000000000000000000;
+				out8 		<= 36'b100010011011111001_000000000000000000;
+				out9 		<= 36'b011111111111111111_000000000000000000;
+				out10 		<= 36'b011111111111111111_000000000000000000;
+				out11 		<= 36'b011111111111111111_000000000000000000;
+				out12 		<= 36'b011111111111111111_000000000000000000;
+				out13 		<= 36'b011111111111111111_000000000000000000;
+				out14 		<= 36'b011111111111111111_000000000000000000;
+				out15 		<= 36'b011111111111111111_000000000000000000;
+				done 		<= 1;
 			end
 			state <= next_state;
 		end
@@ -178,6 +230,7 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 			RESET: begin
 				fly0_a = 0;
 				fly0_b = 0;
+				fly0_w = 0;
 				fly1_a = 0;
 				fly1_b = 0;
 				fly1_w = 0;
@@ -199,24 +252,6 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly7_a = 0;
 				fly7_b = 0;
 				fly7_w = 0;
-				
-				out0 = 0;
-				out1 = 0;
-				out2 = 0;
-				out3 = 0;
-				out4 = 0;
-				out5 = 0;
-				out6 = 0;
-				out7 = 0;
-				out8 = 0;
-				out9 = 0;
-				out10 = 0;
-				out11 = 0;
-				out12 = 0;
-				out13 = 0;
-				out14 = 0;
-				out15 = 0;
-				done = 0;
 				
 				if (start) begin
 					next_state = STAGE_1;
@@ -252,24 +287,6 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly7_b = in15;
 				fly7_w = W_0_16;
 				
-				out0 = 0;
-				out1 = 0;
-				out2 = 0;
-				out3 = 0;
-				out4 = 0;
-				out5 = 0;
-				out6 = 0;
-				out7 = 0;
-				out8 = 0;
-				out9 = 0;
-				out10 = 0;
-				out11 = 0;
-				out12 = 0;
-				out13 = 0;
-				out14 = 0;
-				out15 = 0;
-				done = 0;
-				
 				next_state = STAGE_2;
 			end
 			
@@ -298,24 +315,6 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly7_a = fly6_diff;
 				fly7_b = fly7_diff;
 				fly7_w = W_4_16;
-				
-				out0 = 0;
-				out1 = 0;
-				out2 = 0;
-				out3 = 0;
-				out4 = 0;
-				out5 = 0;
-				out6 = 0;
-				out7 = 0;
-				out8 = 0;
-				out9 = 0;
-				out10 = 0;
-				out11 = 0;
-				out12 = 0;
-				out13 = 0;
-				out14 = 0;
-				out15 = 0;
-				done = 0;
 				
 				next_state = STAGE_3;
 			end
@@ -347,24 +346,6 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly7_b = fly7_diff;
 				fly7_w = W_6_16;
 				
-				out0 = 0;
-				out1 = 0;
-				out2 = 0;
-				out3 = 0;
-				out4 = 0;
-				out5 = 0;
-				out6 = 0;
-				out7 = 0;
-				out8 = 0;
-				out9 = 0;
-				out10 = 0;
-				out11 = 0;
-				out12 = 0;
-				out13 = 0;
-				out14 = 0;
-				out15 = 0;
-				done = 0;
-				
 				next_state = STAGE_4;
 			end
 
@@ -395,30 +376,13 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly7_b = fly7_diff;
 				fly7_w = W_7_16;
 				
-				out0 = 0;
-				out1 = 0;
-				out2 = 0;
-				out3 = 0;
-				out4 = 0;
-				out5 = 0;
-				out6 = 0;
-				out7 = 0;
-				out8 = 0;
-				out9 = 0;
-				out10 = 0;
-				out11 = 0;
-				out12 = 0;
-				out13 = 0;
-				out14 = 0;
-				out15 = 0;
-				done = 0;
-				
 				next_state = DONE;
 			end
 			
 			DONE: begin
 				fly0_a = 0;
 				fly0_b = 0;
+				fly0_w = 0;
 				fly1_a = 0;
 				fly1_b = 0;
 				fly1_w = 0;
@@ -440,54 +404,12 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 				fly7_a = 0;
 				fly7_b = 0;
 				fly7_w = 0;
-				fly8_a = 0;
-				fly8_b = 0;
-				fly8_w = 0;
-				fly9_a = 0;
-				fly9_b = 0;
-				fly9_w = 0;
-				fly10_a = 0;
-				fly10_b = 0;
-				fly10_w = 0;
-				fly11_a = 0;
-				fly11_b = 0;
-				fly11_w = 0;
-				fly12_a = 0;
-				fly12_b = 0;
-				fly12_w = 0;
-				fly13_a = 0;
-				fly13_b = 0;
-				fly13_w = 0;
-				fly14_a = 0;
-				fly14_b = 0;
-				fly14_w = 0;
-				fly15_a = 0;
-				fly15_b = 0;
-				fly15_w = 0;
-				
-				out0 = fly0_sum;
-				out1 = fly1_sum;
-				out2 = fly2_sum;
-				out3 = fly3_sum;
-				out4 = fly4_sum;
-				out5 = fly5_sum;
-				out6 = fly6_sum;
-				out7 = fly7_sum;
-				out8 = fly1_diff;
-				out9 = fly2_diff;
-				out10 = fly3_diff;
-				out11 = fly4_diff;
-				out12 = fly5_diff;
-				out13 = fly6_diff;
-				out14 = fly7_diff;
-				out15 = fly8_diff;
-				done = 1;
 				
 				if (start) begin
-					next_state = DONE;
+					next_state = STAGE_1;
 				end
 				else begin
-					next_state = RESET;
+					next_state = DONE;
 				end
 			end
 		endcase

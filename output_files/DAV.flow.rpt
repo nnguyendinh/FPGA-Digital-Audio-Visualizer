@@ -1,5 +1,5 @@
 Flow report for DAV
-Sun Aug 13 16:48:31 2023
+Mon May 20 11:53:31 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Aug 13 16:48:31 2023       ;
+; Flow Status                        ; Successful - Mon May 20 11:53:31 2024       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; DAV                                         ;
-; Top-level Entity Name              ; mic_sampler_test                            ;
+; Top-level Entity Name              ; audio_display_top                           ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 121 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 94 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 94 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 94                                          ;
-; Total pins                         ; 13 / 360 ( 4 % )                            ;
+; Total logic elements               ; 896 / 49,760 ( 2 % )                        ;
+;     Total combinational functions  ; 497 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 603 / 49,760 ( 1 % )                        ;
+; Total registers                    ; 603                                         ;
+; Total pins                         ; 28 / 360 ( 8 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 64 / 1,677,312 ( < 1 % )                    ;
+; Total memory bits                  ; 768 / 1,677,312 ( < 1 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -67,43 +67,49 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/13/2023 16:47:59 ;
+; Start date & time ; 05/20/2024 11:53:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DAV                 ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                         ;
-+-------------------------------------+-------------------------------------------------------------+---------------+------------------+-----------------------------------+
-; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name      ; Section Id                        ;
-+-------------------------------------+-------------------------------------------------------------+---------------+------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589195.169197047922404                              ; --            ; --               ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --               ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --               ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --               ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --               ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                           ; --            ; --               ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (SystemVerilog)                           ; <None>        ; --               ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --               ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --               ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --               ; --                                ;
-; MISC_FILE                           ; ADC_25Mhz/synthesis/../ADC_25Mhz.cmp                        ; --            ; --               ; --                                ;
-; MISC_FILE                           ; ADC_25Mhz/synthesis/../../ADC_25Mhz.qsys                    ; --            ; --               ; --                                ;
-; MISC_FILE                           ; pll_bb.v                                                    ; --            ; --               ; --                                ;
-; MISC_FILE                           ; pll.ppf                                                     ; --            ; --               ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; mic_sampler_test ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; mic_sampler_test ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; mic_sampler_test ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --            ; --               ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --               ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --               ; --                                ;
-; SLD_FILE                            ; ADC_25Mhz/synthesis/ADC_25Mhz.debuginfo                     ; --            ; --               ; --                                ;
-; SLD_INFO                            ; QSYS_NAME ADC_25Mhz HAS_SOPCINFO 1 GENERATION_ID 1691876373 ; --            ; ADC_25Mhz        ; --                                ;
-; SOPCINFO_FILE                       ; ADC_25Mhz/synthesis/../../ADC_25Mhz.sopcinfo                ; --            ; --               ; --                                ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --               ; --                                ;
-; TOP_LEVEL_ENTITY                    ; mic_sampler_test                                            ; DAV           ; --               ; --                                ;
-+-------------------------------------+-------------------------------------------------------------+---------------+------------------+-----------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                          ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+-----------------------------------+
+; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name       ; Section Id                        ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 26552720376466.171623118224700                              ; --            ; --                ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --                ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --                ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --                ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --                ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                           ; --            ; --                ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (SystemVerilog)                           ; <None>        ; --                ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --                ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --                ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --                ; --                                ;
+; MISC_FILE                           ; ADC_10MHz/synthesis/../ADC_10MHz.cmp                        ; --            ; --                ; --                                ;
+; MISC_FILE                           ; ADC_10MHz/synthesis/../../ADC_10MHz.qsys                    ; --            ; --                ; --                                ;
+; MISC_FILE                           ; ADC_25Mhz/synthesis/../ADC_25Mhz.cmp                        ; --            ; --                ; --                                ;
+; MISC_FILE                           ; ADC_25Mhz/synthesis/../../ADC_25Mhz.qsys                    ; --            ; --                ; --                                ;
+; MISC_FILE                           ; pll_bb.v                                                    ; --            ; --                ; --                                ;
+; MISC_FILE                           ; pll.ppf                                                     ; --            ; --                ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; audio_display_top ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; audio_display_top ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; audio_display_top ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --            ; --                ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --                ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --                ; --                                ;
+; SLD_FILE                            ; ADC_10MHz/synthesis/ADC_10MHz.debuginfo                     ; --            ; --                ; --                                ;
+; SLD_FILE                            ; ADC_25Mhz/synthesis/ADC_25Mhz.debuginfo                     ; --            ; --                ; --                                ;
+; SLD_INFO                            ; QSYS_NAME ADC_10MHz HAS_SOPCINFO 1 GENERATION_ID 1715830767 ; --            ; ADC_10MHz         ; --                                ;
+; SLD_INFO                            ; QSYS_NAME ADC_25Mhz HAS_SOPCINFO 1 GENERATION_ID 1691876373 ; --            ; ADC_25Mhz         ; --                                ;
+; SOPCINFO_FILE                       ; ADC_10MHz/synthesis/../../ADC_10MHz.sopcinfo                ; --            ; --                ; --                                ;
+; SOPCINFO_FILE                       ; ADC_25Mhz/synthesis/../../ADC_25Mhz.sopcinfo                ; --            ; --                ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --                ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --                ; --                                ;
+; TOP_LEVEL_ENTITY                    ; audio_display_top                                           ; DAV           ; --                ; --                                ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -111,10 +117,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4806 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:11     ; 1.0                     ; 5648 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4724 MB             ; 00:00:02                           ;
-; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4836 MB             ; 00:00:15                           ;
+; Fitter               ; 00:00:12     ; 1.1                     ; 5657 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

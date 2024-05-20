@@ -29,7 +29,7 @@ module vga_test(
 
 	pll vga_generator(clk, vgaClock);
 
-	vga display(.vgaclk(vgaClock), .rst(reset), .hsync(hsync), .vsync(vsync), .red(red), .green(green), .blue(blue), .bar0(bar0), 
+	vga display(.vgaclk(vgaClock), .rst(rst), .hsync(hsync), .vsync(vsync), .red(red), .green(green), .blue(blue), .bar0(bar0), 
             .bar1(bar1), .bar2(bar2), .bar3(bar3), .bar4(bar4), .bar5(bar5), .bar6(bar6), .bar7(bar7), .bar8(bar8), .bar9(bar9), 
             .bar10(bar10), .bar11(bar11), .bar12(bar12), .bar13(bar13), .bar14(bar14), .bar15(bar15));
 	
