@@ -1,5 +1,5 @@
 Assembler report for DAV
-Mon May 20 11:53:31 2024
+Tue May 21 01:18:36 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 20 11:53:31 2024 ;
+; Assembler Status      ; Successful - Tue May 21 01:18:36 2024 ;
 ; Revision Name         ; DAV                                   ;
 ; Top-level Entity Name ; audio_display_top                     ;
 ; Family                ; MAX 10                                ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+---------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                     ;
 +----------------+---------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x002E727C                                                                                  ;
-; Checksum       ; 0x002E727C                                                                                  ;
+; JTAG usercode  ; 0x002CDDBC                                                                                  ;
+; Checksum       ; 0x002CDDBC                                                                                  ;
 +----------------+---------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,16 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Mon May 20 11:53:28 2024
+    Info: Processing started: Tue May 21 01:18:33 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DAV -c DAV
+Warning (125092): Tcl Script File ADC_25Mhz/synthesis/ADC_25Mhz.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ADC_25Mhz/synthesis/ADC_25Mhz.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4736 megabytes
-    Info: Processing ended: Mon May 20 11:53:31 2024
+Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Tue May 21 01:18:36 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

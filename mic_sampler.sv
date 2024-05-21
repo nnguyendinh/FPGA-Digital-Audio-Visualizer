@@ -1,13 +1,11 @@
-module mic_sampler(clk_25, clk_adc, start, done, s0, s1, s2, s3, s4, s5, s6, 
+module mic_sampler(clk_25, clk_adc, s0, s1, s2, s3, s4, s5, s6, 
 							s7, s8, s9, s10, s11, s12, s13, s14, s15, clk_sampling);
 
 	// Inputs		
 	input clk_25; // 25Mhz input clock
 	input clk_adc;	// 10Mhz ADC clock
-	input start;
 
 	// Outputs
-	output reg done = 0;
 	output reg [17:0] s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15 = 0;
 	
 	// Internal signals
@@ -22,79 +20,31 @@ module mic_sampler(clk_25, clk_adc, start, done, s0, s1, s2, s3, s4, s5, s6,
 	localparam SAMPLING = 1'b1;
 	reg state_d = IDLE;
 	reg state = IDLE;
+
+	assign done = 1'b1;
 	
-	clockDivider thanks_prem(clk_adc, 19'd64, 1'b0, clk_sampling);
+	clockDivider thanks_prem(clk_25, 19'd5000, 1'b0, clk_sampling);
 
 	// ADC
 	ADC_10MHz mic(.CLOCK(clk_adc), .CH0(sample), .RESET(0));
-
-	// Sample 16 times
+	
 	always @(posedge clk_sampling) begin
-		state <= state_d;
-		
-		// Set collected to 0 when idle
-		if (state == IDLE) begin
-			collected <= 0;
-			index <= 0;
-		end
+		s0 <= (sample << 6);
+		s1 <= s0;
+		s2 <= s1;
+		s3 <= s2;
+		s4 <= s3;
+		s5 <= s4;
+		s6 <= s5;
+		s7 <= s6;
+		s8 <= s7;
+		s9 <= s8;
+		s10 <= s9;
+		s11 <= s10;
+		s12 <= s11;
+		s13 <= s12;
+		s14 <= s13;
+		s15 <= s14;
+	end 
 
-		// Sample 16 times
-		else begin
-			if (index < 15) begin
-				samples[index] <= sample;
-				index <= index + 4'b0001;
-				collected <= 0; 
-			end
-			else begin
-				collected <= 1;
-				index <= 0;
-				s0 <= samples[0] << 6;
-				s1 <= samples[1] << 6;
-				s2 <= samples[2] << 6;
-				s3 <= samples[3] << 6;
-				s4 <= samples[4] << 6;
-				s5 <= samples[5] << 6;
-				s6 <= samples[6] << 6;
-				s7 <= samples[7] << 6;
-				s8 <= samples[8] << 6;
-				s9 <= samples[9] << 6;
-				s10 <= samples[10] << 6;
-				s11 <= samples[11] << 6;
-				s12 <= samples[12] << 6;
-				s13 <= samples[13] << 6;
-				s14 <= samples[14] << 6;
-				s15 <= sample << 6;
-			end
-		end
-	end
-	
-	always @(posedge clk_25) begin
-		if (collected) begin
-			done <= 1;
-		end
-		else begin
-			done <= 0;
-		end
-	end
-
- 	// State machine
- 	always_comb begin
- 		if (state == IDLE) begin
- 			if (start) begin
- 				state_d = SAMPLING;
- 			end
- 			else begin
- 				state_d = IDLE;
- 			end
- 		end
- 		else begin
- 			if (done) begin
- 				state_d = IDLE;
- 			end
- 			else begin
- 				state_d = SAMPLING;
- 			end
- 		end
- 	end
-	
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DAV
-Mon May 20 11:53:14 2024
+Tue May 21 01:18:18 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -22,49 +22,47 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
  14. Registers Removed During Synthesis
  15. Removed Registers Triggering Further Register Optimizations
  16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer
- 20. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer
- 21. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram
- 22. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component|altsyncram_v5s1:auto_generated
- 23. Parameter Settings for User Entity Instance: pll:clk_generator|altpll:altpll_component
- 24. Parameter Settings for User Entity Instance: mic_sampler:sampler|clockDivider:thanks_prem
- 25. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0
- 26. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
- 27. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|altpll:adc_pll
- 28. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core
- 29. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal
- 30. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm
- 31. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer
- 32. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer
- 33. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component
- 34. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst
- 35. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|chsel_code_converter_sw_to_hw:decoder
- 36. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance
- 37. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal
- 38. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_ctrl:u_seq_ctrl
- 39. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal
- 40. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram
- 41. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component
- 42. Parameter Settings for Inferred Entity Instance: vga:display|lpm_divide:Div0
- 43. Parameter Settings for Inferred Entity Instance: vga:display|lpm_divide:Div1
- 44. altpll Parameter Settings by Entity Instance
- 45. scfifo Parameter Settings by Entity Instance
- 46. altsyncram Parameter Settings by Entity Instance
- 47. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram"
- 48. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal"
- 49. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo"
- 50. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal"
- 51. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core"
- 52. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0"
- 53. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic"
- 54. Port Connectivity Checks: "mic_sampler:sampler|clockDivider:thanks_prem"
- 55. Port Connectivity Checks: "mic_sampler:sampler"
- 56. Post-Synthesis Netlist Statistics for Top Partition
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
- 59. Analysis & Synthesis Suppressed Messages
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer
+ 19. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer
+ 20. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|altsyncram_rqn1:FIFOram
+ 21. Source assignments for mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component|altsyncram_v5s1:auto_generated
+ 22. Parameter Settings for User Entity Instance: pll:clk_generator|altpll:altpll_component
+ 23. Parameter Settings for User Entity Instance: mic_sampler:sampler|clockDivider:thanks_prem
+ 24. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0
+ 25. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
+ 26. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|altpll:adc_pll
+ 27. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core
+ 28. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal
+ 29. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm
+ 30. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer
+ 31. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer
+ 32. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component
+ 33. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst
+ 34. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|chsel_code_converter_sw_to_hw:decoder
+ 35. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst|fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance
+ 36. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal
+ 37. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_ctrl:u_seq_ctrl
+ 38. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal
+ 39. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram
+ 40. Parameter Settings for User Entity Instance: mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component
+ 41. Parameter Settings for Inferred Entity Instance: vga:display|lpm_divide:Div0
+ 42. Parameter Settings for Inferred Entity Instance: vga:display|lpm_divide:Div1
+ 43. altpll Parameter Settings by Entity Instance
+ 44. scfifo Parameter Settings by Entity Instance
+ 45. altsyncram Parameter Settings by Entity Instance
+ 46. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram"
+ 47. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal"
+ 48. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo"
+ 49. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal"
+ 50. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core"
+ 51. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0"
+ 52. Port Connectivity Checks: "mic_sampler:sampler|ADC_10MHz:mic"
+ 53. Port Connectivity Checks: "mic_sampler:sampler|clockDivider:thanks_prem"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+ 57. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -91,15 +89,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 20 11:53:14 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 21 01:18:18 2024       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; DAV                                         ;
 ; Top-level Entity Name              ; audio_display_top                           ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 975                                         ;
-;     Total combinational functions  ; 496                                         ;
-;     Dedicated logic registers      ; 603                                         ;
-; Total registers                    ; 603                                         ;
+; Total logic elements               ; 800                                         ;
+;     Total combinational functions  ; 460                                         ;
+;     Dedicated logic registers      ; 457                                         ;
+; Total registers                    ; 457                                         ;
 ; Total pins                         ; 28                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 768                                         ;
@@ -209,8 +207,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -282,40 +279,40 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                         ;
-+---------------------------------------------+-------------------------------------------------------+
-; Resource                                    ; Usage                                                 ;
-+---------------------------------------------+-------------------------------------------------------+
-; Estimated Total logic elements              ; 975                                                   ;
-;                                             ;                                                       ;
-; Total combinational functions               ; 496                                                   ;
-; Logic element usage by number of LUT inputs ;                                                       ;
-;     -- 4 input functions                    ; 193                                                   ;
-;     -- 3 input functions                    ; 82                                                    ;
-;     -- <=2 input functions                  ; 221                                                   ;
-;                                             ;                                                       ;
-; Logic elements by mode                      ;                                                       ;
-;     -- normal mode                          ; 366                                                   ;
-;     -- arithmetic mode                      ; 130                                                   ;
-;                                             ;                                                       ;
-; Total registers                             ; 603                                                   ;
-;     -- Dedicated logic registers            ; 603                                                   ;
-;     -- I/O registers                        ; 0                                                     ;
-;                                             ;                                                       ;
-; I/O pins                                    ; 28                                                    ;
-; Total memory bits                           ; 768                                                   ;
-;                                             ;                                                       ;
-; Embedded Multiplier 9-bit elements          ; 0                                                     ;
-;                                             ;                                                       ;
-; Total PLLs                                  ; 2                                                     ;
-;     -- PLLs                                 ; 2                                                     ;
-;                                             ;                                                       ;
-; Maximum fan-out node                        ; mic_sampler:sampler|clockDivider:thanks_prem|outClock ;
-; Maximum fan-out                             ; 293                                                   ;
-; Total fan-out                               ; 3394                                                  ;
-; Average fan-out                             ; 2.90                                                  ;
-+---------------------------------------------+-------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                        ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 800                                                                                  ;
+;                                             ;                                                                                      ;
+; Total combinational functions               ; 460                                                                                  ;
+; Logic element usage by number of LUT inputs ;                                                                                      ;
+;     -- 4 input functions                    ; 161                                                                                  ;
+;     -- 3 input functions                    ; 78                                                                                   ;
+;     -- <=2 input functions                  ; 221                                                                                  ;
+;                                             ;                                                                                      ;
+; Logic elements by mode                      ;                                                                                      ;
+;     -- normal mode                          ; 330                                                                                  ;
+;     -- arithmetic mode                      ; 130                                                                                  ;
+;                                             ;                                                                                      ;
+; Total registers                             ; 457                                                                                  ;
+;     -- Dedicated logic registers            ; 457                                                                                  ;
+;     -- I/O registers                        ; 0                                                                                    ;
+;                                             ;                                                                                      ;
+; I/O pins                                    ; 28                                                                                   ;
+; Total memory bits                           ; 768                                                                                  ;
+;                                             ;                                                                                      ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
+;                                             ;                                                                                      ;
+; Total PLLs                                  ; 2                                                                                    ;
+;     -- PLLs                                 ; 2                                                                                    ;
+;                                             ;                                                                                      ;
+; Maximum fan-out node                        ; pll:clk_generator|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
+; Maximum fan-out                             ; 201                                                                                  ;
+; Total fan-out                               ; 2676                                                                                 ;
+; Average fan-out                             ; 2.71                                                                                 ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -323,8 +320,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                      ; Entity Name                            ; Library Name ;
 +------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
-; |audio_display_top                                                                 ; 496 (7)             ; 603 (148)                 ; 768         ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |audio_display_top                                                                                                                                                                                                                                                                                                                       ; audio_display_top                      ; work         ;
-;    |mic_sampler:sampler|                                                           ; 169 (31)            ; 435 (292)                 ; 768         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler                                                                                                                                                                                                                                                                                                   ; mic_sampler                            ; work         ;
+; |audio_display_top                                                                 ; 460 (5)             ; 457 (147)                 ; 768         ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |audio_display_top                                                                                                                                                                                                                                                                                                                       ; audio_display_top                      ; work         ;
+;    |mic_sampler:sampler|                                                           ; 134 (0)             ; 290 (147)                 ; 768         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler                                                                                                                                                                                                                                                                                                   ; mic_sampler                            ; work         ;
 ;       |ADC_10MHz:mic|                                                              ; 82 (0)              ; 110 (0)                   ; 768         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic                                                                                                                                                                                                                                                                                     ; ADC_10MHz                              ; ADC_10MHz    ;
 ;          |ADC_10MHz_adc_mega_0:adc_mega_0|                                         ; 82 (1)              ; 110 (13)                  ; 768         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0                                                                                                                                                                                                                                                     ; ADC_10MHz_adc_mega_0                   ; ADC_10MHz    ;
 ;             |altera_up_avalon_adv_adc:ADC_CTRL|                                    ; 81 (18)             ; 97 (21)                   ; 768         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL                                                                                                                                                                                                                   ; altera_up_avalon_adv_adc               ; ADC_10MHz    ;
@@ -342,11 +339,11 @@ https://fpgasoftware.intel.com/eula.
 ;                            |altsyncram_v5s1:auto_generated|                        ; 0 (0)               ; 0 (0)                     ; 768         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component|altsyncram_v5s1:auto_generated ; altsyncram_v5s1                        ; work         ;
 ;                |altpll:adc_pll|                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|altpll:adc_pll                                                                                                                                                                                                    ; altpll                                 ; work         ;
 ;                   |MAX10_ADC_PLL_altpll:auto_generated|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|altpll:adc_pll|MAX10_ADC_PLL_altpll:auto_generated                                                                                                                                                                ; MAX10_ADC_PLL_altpll                   ; work         ;
-;       |clockDivider:thanks_prem|                                                   ; 56 (56)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|clockDivider:thanks_prem                                                                                                                                                                                                                                                                          ; clockDivider                           ; work         ;
+;       |clockDivider:thanks_prem|                                                   ; 52 (52)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|mic_sampler:sampler|clockDivider:thanks_prem                                                                                                                                                                                                                                                                          ; clockDivider                           ; work         ;
 ;    |pll:clk_generator|                                                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|pll:clk_generator                                                                                                                                                                                                                                                                                                     ; pll                                    ; work         ;
 ;       |altpll:altpll_component|                                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|pll:clk_generator|altpll:altpll_component                                                                                                                                                                                                                                                                             ; altpll                                 ; work         ;
 ;          |pll_altpll:auto_generated|                                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|pll:clk_generator|altpll:altpll_component|pll_altpll:auto_generated                                                                                                                                                                                                                                                   ; pll_altpll                             ; work         ;
-;    |vga:display|                                                                   ; 320 (164)           ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|vga:display                                                                                                                                                                                                                                                                                                           ; vga                                    ; work         ;
+;    |vga:display|                                                                   ; 321 (165)           ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|vga:display                                                                                                                                                                                                                                                                                                           ; vga                                    ; work         ;
 ;       |lpm_divide:Div0|                                                            ; 71 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|vga:display|lpm_divide:Div0                                                                                                                                                                                                                                                                                           ; lpm_divide                             ; work         ;
 ;          |lpm_divide_ktl:auto_generated|                                           ; 71 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|vga:display|lpm_divide:Div0|lpm_divide_ktl:auto_generated                                                                                                                                                                                                                                                             ; lpm_divide_ktl                         ; work         ;
 ;             |sign_div_unsign_mlh:divider|                                          ; 71 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |audio_display_top|vga:display|lpm_divide:Div0|lpm_divide_ktl:auto_generated|sign_div_unsign_mlh:divider                                                                                                                                                                                                                                 ; sign_div_unsign_mlh                    ; work         ;
@@ -379,17 +376,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------+
-; State Machine - |audio_display_top|state                                            ;
-+----------------+-----------+----------------+-------------+------------+------------+
-; Name           ; state.FFT ; state.SAMPLING ; state.START ; state.IDLE ; state.DONE ;
-+----------------+-----------+----------------+-------------+------------+------------+
-; state.IDLE     ; 0         ; 0              ; 0           ; 0          ; 0          ;
-; state.START    ; 0         ; 0              ; 1           ; 1          ; 0          ;
-; state.SAMPLING ; 0         ; 1              ; 0           ; 1          ; 0          ;
-; state.FFT      ; 1         ; 0              ; 0           ; 1          ; 0          ;
-; state.DONE     ; 0         ; 0              ; 0           ; 1          ; 1          ;
-+----------------+-----------+----------------+-------------+------------+------------+
++-----------------------------------------------------------------+
+; State Machine - |audio_display_top|state                        ;
++-------------+------------+-----------+-------------+------------+
+; Name        ; state.DONE ; state.FFT ; state.START ; state.IDLE ;
++-------------+------------+-----------+-------------+------------+
+; state.IDLE  ; 0          ; 0         ; 0           ; 0          ;
+; state.START ; 0          ; 0         ; 1           ; 1          ;
+; state.FFT   ; 0          ; 1         ; 0           ; 1          ;
+; state.DONE  ; 1          ; 0         ; 0           ; 1          ;
++-------------+------------+-----------+-------------+------------+
 
 
 Encoding Type:  One-Hot
@@ -455,10 +451,10 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                                                                                                                                                                                                                                                                                                                                             ; Reason for Removal                                                                                                                                                                                                                                                           ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; mic_sampler:sampler|s0[1..5]                                                                                                                                                                                                                                                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|e_eop                                                                                                                                                                                                                           ; Stuck at VCC due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|csr_readdata[1..11]                                                                                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_csr:u_seq_csr|mode[0..2]                                                                                                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
-; mic_sampler:sampler|s0[2..5]                                                                                                                                                                                                                                                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sequencer_on                                                                                                                                                                                                                                                                                                                          ; Stuck at VCC due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_csr:u_seq_csr|sw_clr_run                                                                                                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_ctrl:u_seq_ctrl|cmd_channel[0]                                                                                                                                                                           ; Merged with mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sequencer:sequencer_internal|altera_modular_adc_sequencer_ctrl:u_seq_ctrl|cmd_valid       ;
@@ -485,13 +481,14 @@ Encoding Type:  One-Hot
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|rsp_eop                                                                                                                                                                                      ; Merged with mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|rsp_valid           ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|csr_readdata[0]                                                                                                                                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|cmd_fetched                                                                                                                                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
+; state.FFT                                                                                                                                                                                                                                                                                                                                                                                                                                 ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.WAIT                                                                                                                                                                              ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.GETCMD_W                                                                                                                                                                          ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.AVRG_CNT                                                                                                                                                                          ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.SYNC1                                                                                                                                                                             ; Lost fanout                                                                                                                                                                                                                                                                  ;
-; state.FFT                                                                                                                                                                                                                                                                                                                                                                                                                                 ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; state~2                                                                                                                                                                                                                                                                                                                                                                                                                                   ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; state~3                                                                                                                                                                                                                                                                                                                                                                                                                                   ; Lost fanout                                                                                                                                                                                                                                                                  ;
+; state~4                                                                                                                                                                                                                                                                                                                                                                                                                                   ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~2                                                                                                                                                                                                                                                                                                                           ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~3                                                                                                                                                                                                                                                                                                                           ; Lost fanout                                                                                                                                                                                                                                                                  ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~4                                                                                                                                                                                                                                                                                                                           ; Lost fanout                                                                                                                                                                                                                                                                  ;
@@ -508,7 +505,7 @@ Encoding Type:  One-Hot
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.PUTRESP_PEND                                                                                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|pend                                                                                                                                                                                         ; Stuck at VCC due to stuck port data_in                                                                                                                                                                                                                                       ;
 ; mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|ctrl_state.PUTRESP_DLY1                                                                                                                                                                      ; Merged with mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|rsp_valid           ;
-; Total Number of Removed Registers = 104                                                                                                                                                                                                                                                                                                                                                                                                   ;                                                                                                                                                                                                                                                                              ;
+; Total Number of Removed Registers = 106                                                                                                                                                                                                                                                                                                                                                                                                   ;                                                                                                                                                                                                                                                                              ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -566,25 +563,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 603   ;
+; Total registers                              ; 457   ;
 ; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 487   ;
+; Number of registers using Clock Enable       ; 202   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; mic_sampler:sampler|index[0]           ; 17      ;
-; mic_sampler:sampler|index[1]           ; 17      ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -592,14 +578,12 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|channel[1]                                                                                                                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|int_timer[7] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |audio_display_top|mic_sampler:sampler|index[2]                                                                                                                                                                                                                              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |audio_display_top|vga:display|hc[0]                                                                                                                                                                                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |audio_display_top|vga:display|vc[6]                                                                                                                                                                                                                                         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |audio_display_top|mic_sampler:sampler|index[1]                                                                                                                                                                                                                              ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |audio_display_top|vga:display|blue[3]                                                                                                                                                                                                                                       ;
-; 16:1               ; 9 bits    ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |audio_display_top|vga:display|Mux8                                                                                                                                                                                                                                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|channel[2]                                                                                                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |audio_display_top|mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|int_timer[5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |audio_display_top|vga:display|hc[4]                                                                                                                                                                                                                                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |audio_display_top|vga:display|vc[8]                                                                                                                                                                                                                                         ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |audio_display_top|vga:display|green[2]                                                                                                                                                                                                                                      ;
+; 16:1               ; 9 bits    ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |audio_display_top|vga:display|Mux6                                                                                                                                                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1032,7 +1016,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------+---------------------------------------------------------------+
 ; Parameter Name ; Value    ; Type                                                          ;
 +----------------+----------+---------------------------------------------------------------+
-; BASE_SPEED     ; 10000000 ; Signed Integer                                                ;
+; BASE_SPEED     ; 25000000 ; Signed Integer                                                ;
 +----------------+----------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2125,26 +2109,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mic_sampler:sampler|clockDivider:thanks_prem"                                                                                                            ;
-+--------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                           ;
-+--------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; speed        ; Input ; Warning  ; Input port expression (19 bits) is smaller than the input port (20 bits) it drives.  Extra input bit(s) "speed[19..19]" will be connected to GND. ;
-; speed[18..7] ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
-; speed[5..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
-; speed[7]     ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
-; reset        ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
-+--------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "mic_sampler:sampler" ;
-+-------+-------+----------+----------------------+
-; Port  ; Type  ; Severity ; Details              ;
-+-------+-------+----------+----------------------+
-; start ; Input ; Info     ; Stuck at VCC         ;
-+-------+-------+----------+----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mic_sampler:sampler|clockDivider:thanks_prem"                                                                                                             ;
++---------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                           ;
++---------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; speed         ; Input ; Warning  ; Input port expression (19 bits) is smaller than the input port (20 bits) it drives.  Extra input bit(s) "speed[19..19]" will be connected to GND. ;
+; speed[9..7]   ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
+; speed[18..13] ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
+; speed[11..10] ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
+; speed[6..4]   ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
+; speed[2..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
+; speed[13]     ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
+; speed[4]      ; Input ; Info     ; Stuck at VCC                                                                                                                                      ;
+; reset         ; Input ; Info     ; Stuck at GND                                                                                                                                      ;
++---------------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -2153,28 +2132,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 603                         ;
-;     ENA               ; 469                         ;
+; cycloneiii_ff         ; 457                         ;
+;     ENA               ; 184                         ;
 ;     ENA SCLR          ; 18                          ;
 ;     SCLR              ; 16                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 99                          ;
-; cycloneiii_lcell_comb ; 496                         ;
+;     plain             ; 238                         ;
+; cycloneiii_lcell_comb ; 460                         ;
 ;     arith             ; 130                         ;
 ;         2 data inputs ; 75                          ;
 ;         3 data inputs ; 55                          ;
-;     normal            ; 366                         ;
+;     normal            ; 330                         ;
 ;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 127                         ;
-;         3 data inputs ; 27                          ;
-;         4 data inputs ; 193                         ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 161                         ;
 ; cycloneiii_pll        ; 2                           ;
 ; cycloneiii_ram_block  ; 12                          ;
 ; fiftyfivenm_adcblock  ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.70                       ;
-; Average LUT depth     ; 5.95                        ;
+; Max LUT depth         ; 19.70                       ;
+; Average LUT depth     ; 7.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2193,8 +2172,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Mon May 20 11:53:02 2024
+    Info: Processing started: Tue May 21 01:18:04 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DAV -c DAV
+Warning (125092): Tcl Script File ADC_25Mhz/synthesis/ADC_25Mhz.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ADC_25Mhz/synthesis/ADC_25Mhz.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adc_10mhz/synthesis/adc_10mhz.v
@@ -2247,36 +2228,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
     Info (12023): Found entity 1: vga File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/vga.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mic_sampler_test2.sv
     Info (12023): Found entity 1: mic_sampler_test2 File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler_test2.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/adc_25mhz.v
-    Info (12023): Found entity 1: ADC_25Mhz File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/ADC_25Mhz.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_up_avalon_adv_adc.v
-    Info (12023): Found entity 1: altera_up_avalon_adv_adc File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_up_avalon_adv_adc.v Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_control.v
-    Info (12023): Found entity 1: altera_modular_adc_control File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_control.v Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
-    Info (12023): Found entity 1: altera_modular_adc_control_avrg_fifo File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v Line: 66
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_control_fsm.v
-    Info (12023): Found entity 1: altera_modular_adc_control_fsm File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_control_fsm.v Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_sample_store.v
-    Info (12023): Found entity 1: altera_modular_adc_sample_store File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_sample_store.v Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_sample_store_ram.v
-    Info (12023): Found entity 1: altera_modular_adc_sample_store_ram File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_sample_store_ram.v Line: 66
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_sequencer.v
-    Info (12023): Found entity 1: altera_modular_adc_sequencer File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_sequencer.v Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_sequencer_csr.v
-    Info (12023): Found entity 1: altera_modular_adc_sequencer_csr File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_sequencer_csr.v Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/altera_modular_adc_sequencer_ctrl.v
-    Info (12023): Found entity 1: altera_modular_adc_sequencer_ctrl File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/altera_modular_adc_sequencer_ctrl.v Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/chsel_code_converter_sw_to_hw.v
-    Info (12023): Found entity 1: chsel_code_converter_sw_to_hw File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/chsel_code_converter_sw_to_hw.v Line: 45
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/de10_lite_adc_core_modular_adc_0.v
-    Info (12023): Found entity 1: DE10_Lite_ADC_Core_modular_adc_0 File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/DE10_Lite_ADC_Core_modular_adc_0.v Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
-    Info (12023): Found entity 1: fiftyfivenm_adcblock_primitive_wrapper File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v Line: 50
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
-    Info (12023): Found entity 1: fiftyfivenm_adcblock_top_wrapper File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v Line: 44
-Info (12021): Found 1 design units, including 1 entities, in source file adc_25mhz/synthesis/submodules/adc_25mhz_adc_mega_0.v
-    Info (12023): Found entity 1: ADC_25Mhz_adc_mega_0 File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_25Mhz/synthesis/submodules/ADC_25Mhz_adc_mega_0.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file mic_samples_test.sv
     Info (12023): Found entity 1: mic_samples_test File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_samples_test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mic_sampler.sv
@@ -2287,10 +2238,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: pll File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.sv
     Info (12023): Found entity 1: clockDivider File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/clockDivider.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at mic_sampler.sv(24): created implicit net for "done" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 24
 Warning (10037): Verilog HDL or VHDL warning at mic_sampler_test.sv(60): conditional expression evaluates to a constant File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler_test.sv Line: 60
 Info (12127): Elaborating entity "audio_display_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at audio_display_top.sv(59): object "sampling_start" assigned a value but never read File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 59
-Info (12128): Elaborating entity "pll" for hierarchy "pll:clk_generator" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 62
+Info (12128): Elaborating entity "pll" for hierarchy "pll:clk_generator" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 60
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:clk_generator|altpll:altpll_component" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/pll.v Line: 91
 Info (12130): Elaborated megafunction instantiation "pll:clk_generator|altpll:altpll_component" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/pll.v Line: 91
 Info (12133): Instantiated megafunction "pll:clk_generator|altpll:altpll_component" with the following parameter: File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/pll.v Line: 91
@@ -2351,7 +2302,12 @@ Info (12133): Instantiated megafunction "pll:clk_generator|altpll:altpll_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:clk_generator|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "mic_sampler" for hierarchy "mic_sampler:sampler" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 70
+Info (12128): Elaborating entity "mic_sampler" for hierarchy "mic_sampler:sampler" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 67
+Warning (10036): Verilog HDL or VHDL warning at mic_sampler.sv(24): object "done" assigned a value but never read File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at mic_sampler.sv(13): object "collected" assigned a value but never read File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 13
+Warning (10036): Verilog HDL or VHDL warning at mic_sampler.sv(14): object "index" assigned a value but never read File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 14
+Warning (10036): Verilog HDL or VHDL warning at mic_sampler.sv(21): object "state_d" assigned a value but never read File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at mic_sampler.sv(22): object "state" assigned a value but never read File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 22
 Info (12128): Elaborating entity "clockDivider" for hierarchy "mic_sampler:sampler|clockDivider:thanks_prem" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 26
 Info (12128): Elaborating entity "ADC_10MHz" for hierarchy "mic_sampler:sampler|ADC_10MHz:mic" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/mic_sampler.sv Line: 29
 Info (12128): Elaborating entity "ADC_10MHz_adc_mega_0" for hierarchy "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/ADC_10MHz/synthesis/ADC_10MHz.v Line: 41
@@ -2493,7 +2449,7 @@ Info (12133): Instantiated megafunction "mic_sampler:sampler|ADC_10MHz:mic|ADC_1
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_v5s1.tdf
     Info (12023): Found entity 1: altsyncram_v5s1 File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/db/altsyncram_v5s1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_v5s1" for hierarchy "mic_sampler:sampler|ADC_10MHz:mic|ADC_10MHz_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|DE10_Lite_ADC_Core_modular_adc_0:max10_adc_core|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component|altsyncram_v5s1:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "vga" for hierarchy "vga:display" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 74
+Info (12128): Elaborating entity "vga" for hierarchy "vga:display" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 71
 Warning (10230): Verilog HDL assignment warning at vga.sv(88): truncated value with size 32 to match size of target (1) File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/vga.sv Line: 88
 Warning (10230): Verilog HDL assignment warning at vga.sv(89): truncated value with size 32 to match size of target (1) File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/vga.sv Line: 89
 Warning (10230): Verilog HDL assignment warning at vga.sv(97): truncated value with size 32 to match size of target (4) File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/vga.sv Line: 97
@@ -2567,27 +2523,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_khe File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/db/alt_u_div_khe.tdf Line: 27
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "leds[1]" is stuck at GND File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 12
     Warning (13410): Pin "leds[2]" is stuck at GND File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 12
     Warning (13410): Pin "leds[3]" is stuck at GND File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 12
     Warning (13410): Pin "leds[4]" is stuck at GND File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 12
     Warning (13410): Pin "leds[5]" is stuck at GND File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 17 registers lost all their fanouts during netlist optimizations.
-Warning (20013): Ignored 19 assignments for entity "ADC_25Mhz" -- entity does not exist in design
+Info (17049): 18 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/output_files/DAV.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1028 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "start" File: C:/Users/Nathan Nguyendinh/Documents/Quartus_Projects/DAV/DAV/audio_display_top.sv Line: 5
+Info (21057): Implemented 852 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 985 logic cells
+    Info (21061): Implemented 809 logic cells
     Info (21064): Implemented 12 RAM segments
     Info (21065): Implemented 2 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Mon May 20 11:53:14 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Tue May 21 01:18:18 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+

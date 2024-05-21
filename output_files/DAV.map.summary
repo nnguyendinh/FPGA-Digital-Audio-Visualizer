@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon May 20 11:53:14 2024
+Analysis & Synthesis Status : Successful - Tue May 21 01:18:18 2024
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : DAV
 Top-level Entity Name : audio_display_top
 Family : MAX 10
-Total logic elements : 975
-    Total combinational functions : 496
-    Dedicated logic registers : 603
-Total registers : 603
+Total logic elements : 800
+    Total combinational functions : 460
+    Dedicated logic registers : 457
+Total registers : 457
 Total pins : 28
 Total virtual pins : 0
 Total memory bits : 768

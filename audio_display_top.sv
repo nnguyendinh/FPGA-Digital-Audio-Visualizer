@@ -45,27 +45,24 @@ module audio_display_top(
     reg [17:0] b14 = 0;
     reg [17:0] b15 = 0;
 
-    localparam IDLE = 0;
+	localparam IDLE = 0;
 	localparam START = 1;
-	localparam SAMPLING = 2;
-	localparam FFT = 3;
-    localparam DONE = 4;
+	localparam FFT = 2;
+	localparam DONE = 3;
 
 	reg [2:0] state = IDLE;
 	reg [2:0] state_d = IDLE;
 	
 	wire clk_25;
 	wire clk_sampling;
-    reg sampling_start = 0;
-	 wire sampling_done;
+	wire sampling_done;
 
 	pll clk_generator(clk, clk_25);
 	
-	assign leds[9:2] = s0[9:2];
-	assign leds[1] = start;
+	assign leds[9:1] = s0[9:1];
 	assign leds[0] = clk_sampling;
 
-    mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), .start(1'b1), .done(sampling_done), .s0(s0), 
+	mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), .s0(s0), 
                         .s1(s1), .s2(s2), .s3(s3), .s4(s4), .s5(s5), .s6(s6), .s7(s7), .s8(s8), 
                         .s9(s9), .s10(s10), .s11(s11), .s12(s12), .s13(s13), .s14(s14), .s15(s15), .clk_sampling(clk_sampling));
 
@@ -77,23 +74,10 @@ module audio_display_top(
         state <= state_d;
 
         if (rst) begin
-            sampling_start <= 0;
             state <= IDLE;
         end
-        else if (state == IDLE) begin
-            sampling_start <= 0;
-        end
-        else if (state == START) begin
-            sampling_start <= 1;
-        end
-        else if (state == SAMPLING) begin
-            sampling_start <= 0;
-        end
-        else if (state == FFT) begin
-            sampling_start <= 0;
-        end
+		  
         else if (state == DONE) begin
-            sampling_start <= 0;
             b0 <= s0;
             b1 <= s1;
             b2 <= s2;
@@ -125,14 +109,7 @@ module audio_display_top(
                 end
             end
             START: begin
-                state_d = SAMPLING;
-            end
-            SAMPLING: begin
-                if (sampling_done) begin
-                    state_d = DONE;
-                end
-                else    
-                    state_d = SAMPLING;
+                state_d = DONE;
             end
             // FFT state not included in this test
             FFT: begin

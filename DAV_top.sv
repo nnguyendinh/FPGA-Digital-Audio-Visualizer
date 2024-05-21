@@ -76,7 +76,7 @@ module DAV_top(
 
 	pll clk_generator(clk, clk_25);
 
-    mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), .start(sampling_start), .done(sampling_done), .s0(s0), 
+    mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), /*.start(sampling_start), .done(sampling_done),*/ .s0(s0), 
                         .s1(s1), .s2(s2), .s3(s3), .s4(s4), .s5(s5), .s6(s6), .s7(s7), .s8(s8), 
                         .s9(s9), .s10(s10), .s11(s11), .s12(s12), .s13(s13), .s14(s14), .s15(s15));
 
@@ -95,21 +95,21 @@ module DAV_top(
         state <= state_d;
 
         if (rst) begin
-            sampling_start <= 0;
+            // sampling_start <= 0;
             state <= IDLE;
         end
-        else if (state == IDLE) begin
-            sampling_start <= 0;
-        end
-        else if (state == START) begin
-            sampling_start <= 1;
-        end
-        else if (state == SAMPLING) begin
-            sampling_start <= 0;
-        end
-        else if (state == FFT) begin
-            sampling_start <= 0;
-        end
+        // else if (state == IDLE) begin
+        //     sampling_start <= 0;
+        // end
+        // else if (state == START) begin
+        //     sampling_start <= 1;
+        // end
+        // else if (state == SAMPLING) begin
+        //     sampling_start <= 0;
+        // end
+        // else if (state == FFT) begin
+        //     sampling_start <= 0;
+        // end
         else if (state == DONE) begin
             sampling_start <= 0;
             b0 <= f0[35:18];
@@ -143,16 +143,16 @@ module DAV_top(
                 end
             end
             START: begin
-                state_d = SAMPLING;
+                // state_d = SAMPLING;
+                state_d = FFT;
             end
-            SAMPLING: begin
-                if (sampling_done) begin
-                    state_d = FFT;
-                end
-                else    
-                    state_d = SAMPLING;
-            end
-            // FFT state not included in this test
+            // SAMPLING: begin
+            //     if (sampling_done) begin
+            //         state_d = FFT;
+            //     end
+            //     else    
+            //         state_d = SAMPLING;
+            // end
             FFT: begin
                 if (fft_done) begin
                     state_d = DONE;
