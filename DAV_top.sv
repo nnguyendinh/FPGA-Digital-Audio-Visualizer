@@ -6,7 +6,8 @@ module DAV_top(
 		output reg vsync, 
 		output reg [3:0] red, 
 		output reg [3:0] green, 
-		output reg [3:0] blue
+		output reg [3:0] blue,
+		output [9:0] leds
 	);
 
     wire [17:0] s0;
@@ -62,25 +63,26 @@ module DAV_top(
 
     localparam IDLE = 0;
 	localparam START = 1;
-	localparam SAMPLING = 2;
-	localparam FFT = 3;
-    localparam DONE = 4;
+	localparam FFT = 2;
+    localparam DONE = 3;
 
 	reg [2:0] state = IDLE;
 	reg [2:0] state_d = IDLE;
 	
 	wire clk_25;
-    reg sampling_start = 0;
-	wire sampling_done;
+	reg fft_start = 0;
     wire fft_done;
+	wire clk_sampling;
+	
+	assign leds[9:1] = f0[9:1];
 
 	pll clk_generator(clk, clk_25);
 
-    mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), /*.start(sampling_start), .done(sampling_done),*/ .s0(s0), 
+	mic_sampler sampler(.clk_25(clk_25), .clk_adc(clk_adc), .s0(s0), 
                         .s1(s1), .s2(s2), .s3(s3), .s4(s4), .s5(s5), .s6(s6), .s7(s7), .s8(s8), 
-                        .s9(s9), .s10(s10), .s11(s11), .s12(s12), .s13(s13), .s14(s14), .s15(s15));
+                        .s9(s9), .s10(s10), .s11(s11), .s12(s12), .s13(s13), .s14(s14), .s15(s15), .clk_sampling(clk_sampling));
 
-    fft_16point fft_generator(.clk(clk_25), .reset(rst), .start(sampling_done), 
+    fft_16point fft_generator(.clk(clk_25), .reset(rst), .start(fft_start), 
                                 .in0({s0, 18'd0}), .in1({s1, 18'd0}), .in2({s2, 18'd0}), .in3({s3, 18'd0}), .in4({s4, 18'd0}), .in5({s5, 18'd0}), .in6({s6, 18'd0}), .in7({s7, 18'd0}), 
                                 .in8({s8, 18'd0}), .in9({s9, 18'd0}), .in10({s10, 18'd0}), .in11({s11, 18'd0}), .in12({s12, 18'd0}), .in13({s13, 18'd0}), .in14({s14, 18'd0}), .in15({s15, 18'd0}), 
 					            .out0(f0), .out1(f1), .out2(f2), .out3(f3), .out4(f4), .out5(f5), .out6(f6), .out7(f7), 
@@ -95,23 +97,19 @@ module DAV_top(
         state <= state_d;
 
         if (rst) begin
-            // sampling_start <= 0;
             state <= IDLE;
         end
-        // else if (state == IDLE) begin
-        //     sampling_start <= 0;
-        // end
-        // else if (state == START) begin
-        //     sampling_start <= 1;
-        // end
-        // else if (state == SAMPLING) begin
-        //     sampling_start <= 0;
-        // end
-        // else if (state == FFT) begin
-        //     sampling_start <= 0;
-        // end
+
+        else if (state == START) begin
+            fft_start <= 0;
+        end
+
+        else if (state == FFT) begin
+            fft_start <= 1;
+        end
+   
         else if (state == DONE) begin
-            sampling_start <= 0;
+            fft_start <= 0;
             b0 <= f0[35:18];
             b1 <= f1[35:18];
             b2 <= f2[35:18];
@@ -143,16 +141,9 @@ module DAV_top(
                 end
             end
             START: begin
-                // state_d = SAMPLING;
                 state_d = FFT;
             end
-            // SAMPLING: begin
-            //     if (sampling_done) begin
-            //         state_d = FFT;
-            //     end
-            //     else    
-            //         state_d = SAMPLING;
-            // end
+            
             FFT: begin
                 if (fft_done) begin
                     state_d = DONE;
