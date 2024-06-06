@@ -1,47 +1,13 @@
 module vga(
 		input vgaclk,           //input pixel clock: how fast should this be?
 		input rst,              //synchronous reset
-		  input [17:0] bar0,             //input bar0: bin 0 intensity
-		  input [17:0] bar1,             //input bar1: bin 1 intensity
-		  input [17:0] bar2,             //input bar2: bin 2 intensity
-		  input [17:0] bar3,             //input bar3: bin 3 intensity
-		  input [17:0] bar4,             //input bar4: bin 4 intensity
-		  input [17:0] bar5,             //input bar5: bin 5 intensity
-		  input [17:0] bar6,             //input bar6: bin 6 intensity
-		  input [17:0] bar7,             //input bar7: bin 7 intensity
-		  input [17:0] bar8,             //input bar8: bin 8 intensity
-		  input [17:0] bar9,             //input bar9: bin 9 intensity
-		  input [17:0] bar10,            //input bar10: bin 10 intensity
-		  input [17:0] bar11,            //input bar11: bin 11 intensity
-		  input [17:0] bar12,            //input bar12: bin 12 intensity
-		  input [17:0] bar13,            //input bar13: bin 13 intensity
-		  input [17:0] bar14,            //input bar14: bin 14 intensity
-		  input [17:0] bar15,            //input bar15: bin 15 intensity
-			output hsync,			//horizontal sync out
+		input [17:0] bars [15:0], //input bars: 16 bins of intensity
+		output hsync,			//horizontal sync out
 		output vsync,			//vertical sync out
 		output reg [3:0] red,	//red vga output
 		output reg [3:0] green, //green vga output
 		output reg [3:0] blue	//blue vga output
    );
-
-    wire [17:0] bars [15:0];
-
-    assign bars[0] = bar0;
-    assign bars[1] = bar1;
-    assign bars[2] = bar2;
-    assign bars[3] = bar3;
-    assign bars[4] = bar4;
-    assign bars[5] = bar5;
-    assign bars[6] = bar6;
-    assign bars[7] = bar7;
-    assign bars[8] = bar8;
-    assign bars[9] = bar9;
-    assign bars[10] = bar10;
-    assign bars[11] = bar11;
-    assign bars[12] = bar12;
-    assign bars[13] = bar13;
-    assign bars[14] = bar14;
-    assign bars[15] = bar15;
 	
 	//	DONE: Video protocol constants
     // You can find these described in the VGA specification for 640x480

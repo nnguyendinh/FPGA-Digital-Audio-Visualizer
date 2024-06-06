@@ -1,47 +1,13 @@
-module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6, 
-					in7, in8, in9, in10, in11, in12, in13, in14, in15, 
-					out0, out1, out2, out3, out4, out5, out6, out7, 
-					out8, out9, out10, out11, out12, out13, out14, out15,
-					done);
+module fft_16point(clk, reset, start, inputs, outputs, done);
 	
 	// INPUTS
 	input clk;
 	input reset;
 	input start;
-	input [35:0] in0;
-	input [35:0] in1;
-	input [35:0] in2;
-	input [35:0] in3;
-	input [35:0] in4;
-	input [35:0] in5;
-	input [35:0] in6;
-	input [35:0] in7;
-	input [35:0] in8;
-	input [35:0] in9;
-	input [35:0] in10;
-	input [35:0] in11;
-	input [35:0] in12;
-	input [35:0] in13;
-	input [35:0] in14;
-	input [35:0] in15;
-	
-	// OUTPUTS
-	output reg [35:0] out0 = 0;
-	output reg [35:0] out1 = 0;
-	output reg [35:0] out2 = 0;
-	output reg [35:0] out3 = 0;
-	output reg [35:0] out4 = 0;
-	output reg [35:0] out5 = 0;
-	output reg [35:0] out6 = 0;
-	output reg [35:0] out7 = 0;
-	output reg [35:0] out8 = 0;
-	output reg [35:0] out9 = 0;
-	output reg [35:0] out10 = 0;
-	output reg [35:0] out11 = 0;
-	output reg [35:0] out12 = 0;
-	output reg [35:0] out13 = 0;
-	output reg [35:0] out14 = 0;
-	output reg [35:0] out15 = 0;
+    
+    input [35:0] inputs [0:15];
+    output reg [35:0] outputs [0:15];
+
 	output reg done = 0;
 	
 	// STATES
@@ -186,39 +152,23 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 			end
 			else if (state == DONE) begin
 
-				out0 		<= fly0_sum;
-				out1 		<= fly1_sum;
-				out2 		<= fly2_sum;
-				out3 		<= fly3_sum;
-				out4 		<= fly4_sum;
-				out5 		<= fly5_sum;
-				out6 		<= fly6_sum;
-				out7 		<= fly7_sum;
-				out8 		<= fly0_diff;
-				out9 		<= fly1_diff;
-				out10 		<= fly2_diff;
-				out11 		<= fly3_diff;
-				out12 		<= fly4_diff;
-				out13 		<= fly5_diff;
-				out14 		<= fly6_diff;
-				out15 		<= fly7_diff;
-				// out0 		<= 36'b011111111111111111_000000000000000000;
-				// out1 		<= 36'b011111111111111111_000000000000000000;
-				// out2 		<= 36'b011101100100000111_000000000000000000;
-				// out3 		<= 36'b010110101000001010_000000000000000000;
-				// out4 		<= 36'b001100001111101111_000000000000000000;
-				// out5 		<= 36'b000000000000000000_000000000000000000;
-				// out6 		<= 36'b110011110000010001_000000000000000000;
-				// out7 		<= 36'b101001010111110110_000000000000000000;
-				// out8 		<= 36'b100010011011111001_000000000000000000;
-				// out9 		<= 36'b011111111111111111_000000000000000000;
-				// out10 		<= 36'b011111111111111111_000000000000000000;
-				// out11 		<= 36'b011111111111111111_000000000000000000;
-				// out12 		<= 36'b011111111111111111_000000000000000000;
-				// out13 		<= 36'b011111111111111111_000000000000000000;
-				// out14 		<= 36'b011111111111111111_000000000000000000;
-				// out15 		<= 36'b011111111111111111_000000000000000000;
-				done 		<= 1;
+				outputs[0]		<= fly0_sum;
+				outputs[1]		<= fly1_sum;
+				outputs[2]		<= fly2_sum;
+				outputs[3]		<= fly3_sum;
+				outputs[4]		<= fly4_sum;
+				outputs[5]		<= fly5_sum;
+				outputs[6]		<= fly6_sum;
+				outputs[7]		<= fly7_sum;
+				outputs[8]		<= fly0_diff;
+				outputs[9]		<= fly1_diff;
+				outputs[10] 	<= fly2_diff;
+				outputs[11] 	<= fly3_diff;
+				outputs[12] 	<= fly4_diff;
+				outputs[13] 	<= fly5_diff;
+				outputs[14] 	<= fly6_diff;
+				outputs[15] 	<= fly7_diff;
+				done 			<= 1;
 			end
 			state <= next_state;
 		end
@@ -262,29 +212,29 @@ module fft_16point(clk, reset, start, in0, in1, in2, in3, in4, in5, in6,
 			end
 			
 			STAGE_1: begin
-				fly0_a = in0;
-				fly0_b = in8;
+				fly0_a = inputs[0];
+				fly0_b = inputs[8];
 				fly0_w = W_0_16;
-				fly1_a = in4;
-				fly1_b = in12;
+				fly1_a = inputs[4];
+				fly1_b = inputs[12];
 				fly1_w = W_0_16;
-				fly2_a = in2;
-				fly2_b = in10;
+				fly2_a = inputs[2];
+				fly2_b = inputs[10];
 				fly2_w = W_0_16;
-				fly3_a = in6;
-				fly3_b = in14;
+				fly3_a = inputs[6];
+				fly3_b = inputs[14];
 				fly3_w = W_0_16;
-				fly4_a = in1;
-				fly4_b = in9;
+				fly4_a = inputs[1];
+				fly4_b = inputs[9];
 				fly4_w = W_0_16;
-				fly5_a = in5;
-				fly5_b = in13;
+				fly5_a = inputs[5];
+				fly5_b = inputs[13];
 				fly5_w = W_0_16;
-				fly6_a = in3;
-				fly6_b = in11;
+				fly6_a = inputs[3];
+				fly6_b = inputs[11];
 				fly6_w = W_0_16;
-				fly7_a = in7;
-				fly7_b = in15;
+				fly7_a = inputs[7];
+				fly7_b = inputs[15];
 				fly7_w = W_0_16;
 				
 				next_state = STAGE_2;
